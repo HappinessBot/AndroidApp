@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Happy Face</string>
+    <string name="set_question">Set question</string>
+    <string name="control_robot">Robot controller</string>
+</resources>
