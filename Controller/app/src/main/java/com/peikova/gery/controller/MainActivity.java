@@ -71,16 +71,33 @@ public class MainActivity extends AppCompatActivity {
                     }
                     Log.d("Pressed", test.toString());
                     finalDarkArrow.setVisibility(View.VISIBLE);
+                    allButtonsDisabled(buttons);
                     finalDarkArrow.postDelayed(new Runnable() {
                         public void run() {
                             finalDarkArrow.setVisibility(View.INVISIBLE);
+                            allButtonsEnabled(buttons);
                         }
-                    }, 150);
+                    }, 2000);
 
                 }
             });
         }
     }
+    private void allButtonsDisabled(List<ImageButton> buttons){
+
+        for(int i=0; i<3; i++){
+            buttons.get(i).setEnabled(false);
+        }
+    }
+
+    private void allButtonsEnabled(List<ImageButton> buttons){
+
+        for(int i=0; i<3; i++){
+            buttons.get(i).setEnabled(true);
+        }
+    }
+
+
 
 
 }
